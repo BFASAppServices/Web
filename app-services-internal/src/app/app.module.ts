@@ -8,19 +8,21 @@ import { AppComponent } from './app.component';
 
 // Routing 
 import { AppRoutingModule } from './app-routing.module';
+import { NotFoundComponent } from './page-not-found-component/not-found.component';
 
 // Core module for any shared items across all other modules, also includes Angular material module.
 import { CoreModule } from '@core/core.module';
-import { CoreMaterialModule } from '@core/core-material.module';
 
 // Each functional area modules.
 import { HomeModule } from '@modules/home/home.module';
+import { ConfigModule } from '@modules/config/config.module';
 
 
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+		NotFoundComponent
 	],
 	imports: [
 		BrowserModule,
@@ -33,11 +35,11 @@ import { HomeModule } from '@modules/home/home.module';
 		AppRoutingModule,
 		
 		// Common area module.
-		CoreMaterialModule,
 		CoreModule,
 		
 		// Funcional area modules.
-		HomeModule
+		HomeModule,
+		ConfigModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

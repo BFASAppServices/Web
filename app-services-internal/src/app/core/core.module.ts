@@ -9,8 +9,9 @@ import { CoreMaterialModule } from '@core/core-material.module'
 		CoreMaterialModule,
 	],
 	exports: [
+		CoreMaterialModule,
 		HeaderComponent,
-		FooterComponent
+		FooterComponent,
 	],
 	declarations: [
 		HeaderComponent,
