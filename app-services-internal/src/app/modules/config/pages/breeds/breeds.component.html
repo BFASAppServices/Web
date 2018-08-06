@@ -1,3 +1,3 @@
 <h2>Edit Breeds</h2>
 
-<config-list-with-edit [items]="breedList"></config-list-with-edit>
+<config-list-with-edit [items]="breedList" (onItemEdited)="onBreedEdited($event)"></config-list-with-edit>

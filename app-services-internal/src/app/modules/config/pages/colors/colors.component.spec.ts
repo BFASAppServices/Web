@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ColorsComponent } from './colors.component';
+import { ColorsComponent } from '@modules/config/pages/colors/colors.component';
 
 describe('ColorsComponent', () => {
 	let component: ColorsComponent;

@@ -9,10 +9,10 @@ import { ConfigRoutingModule } from '@modules/config/config-routing.module';
 import { CoreMaterialModule } from '@core/core-material.module'
 
 // Area components.
-import { ConfigComponent } from './pages/config/config.component';
-import { BreedsComponent } from './pages/breeds/breeds.component';
-import { ColorsComponent } from './pages/colors/colors.component';
-import { ListWithEditComponent, ListWithItemValuesDialog } from './components/list-with-edit/list-with-edit.component';
+import { ConfigComponent } from '@modules/config/pages/config/config.component';
+import { BreedsComponent } from '@modules/config/pages/breeds/breeds.component';
+import { ColorsComponent } from '@modules/config/pages/colors/colors.component';
+import { ListWithEditComponent, ListWithItemValuesDialog } from '@modules/config/components/list-with-edit/list-with-edit.component';
 
 
 @NgModule({

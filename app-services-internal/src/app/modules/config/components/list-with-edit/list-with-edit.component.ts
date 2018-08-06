@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, Input } from '@angular/core';
+import { Component, Inject, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 
 export interface ListWithItemValues { 
@@ -19,6 +19,7 @@ export interface ListWithEditItem {
 export class ListWithEditComponent implements OnInit {
 
 	@Input() items: ListWithEditItem[];
+	@Output() onItemEdited = new EventEmitter<ListWithItemValues>();
 
 	constructor(
 		public dialog: MatDialog
@@ -33,8 +34,9 @@ export class ListWithEditComponent implements OnInit {
 		});
 
 		dialogRef.afterClosed().subscribe(result => {
-			console.log('The dialog was closed');
-			console.log(result);
+			if (result && this.onItemEdited) {
+				this.onItemEdited.emit(result);
+			}
 		});
 	}
 

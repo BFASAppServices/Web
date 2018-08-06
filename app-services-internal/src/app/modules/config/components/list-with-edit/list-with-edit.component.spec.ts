@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListWithEditComponent } from './list-with-edit.component';
+import { ListWithEditComponent } from '@modules/config/components/list-with-edit/list-with-edit.component';
 
 describe('ListWithEditComponent', () => {
 	let component: ListWithEditComponent;
